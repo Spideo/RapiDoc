@@ -1,5 +1,15 @@
 .DS_Store
 node_modules
+dist
+docs
+
+# dist files
+!dist/rapidoc-min.js
+!dist/rapidoc-min.js.map
+
+# lock files
+package-lock.json
+yarn.lock
 
 # local env files
 .env.local
@@ -24,3 +34,4 @@ yarn-error.log*
 *.njsproj
 *.sln
 *.sw*
+

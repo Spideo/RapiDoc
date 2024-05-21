@@ -80,7 +80,8 @@ export default function navbarTemplate() {
                   @change = '${this.onSearchChange}'
                   spellcheck = 'false'
                 >
-                <div style='margin: 6px 5px 0 -24px; font-size:var(--font-size-regular); cursor:pointer;'>&#x21a9;</div>
+                <!--<div style='margin: 6px 5px 0 -24px; font-size:var(--font-size-regular); cursor:pointer;'>&#x21a9;</div>-->
+                <div style='margin: 10px 5px 0 -27px; font-size:var(--font-size-regular); cursor:pointer; background: url("./images/search.png") 0% 0% / 15px no-repeat; width: 20px'></div>
               </div>  
               ${this.matchPaths
                 ? html`
@@ -161,13 +162,11 @@ export default function navbarTemplate() {
             : ''
           }  
         </div>
-        <div class='nav-bar-section-title'> OPERATIONS </div>
+        <!--<div class='nav-bar-section-title'> OPERATIONS </div>-->
       </div>
 
       <!-- TAGS AND PATHS-->
-      ${this.resolvedSpec.tags
-        .filter((tag) => tag.paths.filter((path) => pathIsInSearch(this.matchPaths, path, this.matchType)).length)
-        .map((tag) => html`
+      ${this.resolvedSpec.tags.map((tag) => html`
           <div class='nav-bar-tag-and-paths ${(this.renderStyle === 'read' ? 'expanded' : (tag.expanded ? 'expanded' : 'collapsed'))}' >
             ${tag.name === 'General ⦂'
               ? html`<hr style='border:none; border-top: 1px dotted var(--nav-text-color); opacity:0.3; margin:-1px 0 0 0;'/>`
