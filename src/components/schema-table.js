@@ -33,7 +33,7 @@ export default class SchemaTable extends LitElement {
       .table {
         font-size: var(--font-size-small);
         text-align: left;
-        line-height: calc(var(--font-size-small) + 6px);
+        line-height: var(--font-size-regular);
       }
       .table .tr {
         width: calc(100% - 5px);
